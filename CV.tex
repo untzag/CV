@@ -1,22 +1,11 @@
 % document
 \documentclass{resume}  % Use the custom resume.cls style
-\usepackage[left=0.5in, top=0.5in, right=0.5in, bottom=0.5in]{geometry}  % Document margins
-
-% text
-\usepackage[utf8]{inputenc}
-\renewcommand{\familydefault}{\sfdefault}
-
-\usepackage{enumitem}
-\renewcommand\labelitemi{$\cdot$}
-
-% hyperref
-\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black, anchorcolor=black]{hyperref}
-\usepackage[all]{hypcap}  % helps hyperref work properly
 
 % header information
-\name{Blaise J. Thompson}
+\name{Blaise J Thompson}
 \address{725 W Washington Ave. Apt. 306, Madison, WI 53715}
-\address{1$\cdot$424$\cdot$225$\cdot$2493 \\ blaise@untzag.com \\ \href{http://blaise.social/}{blaise.social}}
+\address{1$\cdot$424$\cdot$225$\cdot$2493 \\ blaise@untzag.com \\
+  \href{http://blaise.social/}{blaise.social}}
 \address{\today}
 
 \begin{document}
@@ -25,30 +14,19 @@
   \begin{rSubsection}{University of Wisconsin-Madison}{2011 - Present}
     {PhD, Analytical Chemistry}{Madison WI}
     \item Researcher in John C. Wright group.
-    \item Focus on ultrafast materials spectroscopy.
-    \item Relevant coursework: Instrumental Analysis, Quantum Chemistry, 
-      Experimental Spectroscopy, Applied Optics, Electrochemistry, 
-      Instrumental Design and Control.
+    \item Focus on ultrafast materials spectroscopy and instrument development.
   \end{rSubsection}
-  \begin{rSubsection}{Bates College}{2007 - 2011}{BS, Chemistry; Minor, Philosophy}{Lewiston ME}
-    \item Senior thesis completed in lab of Matthew J. Cote: \textit{Investigations of
+  \begin{rSubsection}{Bates College}{2007 - 2011}{BS, Chemistry; Minor, Philosophy; Concentration:
+      Applying Mathematical Methods}{Lewiston ME}
+    \item Senior thesis completed in lab of Matthew J. Cote: \\ \textit{Investigations of
       Plasmon Polaritions with Total Internal Reflection \& Atomic Force Microscopy}.
-    \item Concentration in Applying Mathematical Methods.
-    \item Relevant coursework: Advanced Inorganic Chemistry, Quantum Chemistry, Macromolecules,
-      Materials Chemistry, Separation Science, Organic Chemistry I and II,
-      Descriptive Inorganic Chemistry, Statistical Thermodynamics, Classical Physics,
-      Modern Physics, Electricity Magnetism \& Waves, Synthesis and Reactivity,
-      Biological Chemistry I and II.
-  \end{rSubsection}
-  \begin{rSubsection}{City High School}{2002 - 2007}{High School Diploma}{Iowa City IA}
-    \item Including two courses at University of Iowa.
   \end{rSubsection}
 \end{rSection}
 
-\begin{rSection}{Research Experience}
+\begin{rSection}{Experience}
   \begin{rSubsection}{John C. Wright Group - ultrafast materials spectroscopy}{2011 - Present}
     {Graduate Assistant}{Madison WI}
-    \item Designed and constructed software tools to collect and process multidimensional spectra.
+    \item Designed and constructed software tools to collect and process multidimensional spectra
     \item Developed novel tools to streamline OPA tuning procedures.
     \item Worked in collaboration with Physical and Materials chemists to address challenges in
       solar energy generation.
@@ -73,8 +51,83 @@
   \end{rSubsection}
 \end{rSection}
 
+\clearpage
+
+\begin{rSection}{Projects (see my \href{https://github.com/untzag}{GitHub})}
+  \begin{rSubsection}{Creator: \href{http://wright.tools}{WrightTools}}{2014 - Present}
+    {Tools for loading, processing, and plotting multidimensional spectroscopy data.}{}
+    \item Single processing toolkit for wide variety of instrumental data, built to be extensible
+      as more data-types become relevant
+    \item Offers specialized interactions, such as transformations, that are particularly suited to
+      multidimensional spectroscopy
+    \item Online documentation through Sphinx and ReadTheDocs
+    \item Project managed with several graduate student and undergraduate contributors, active
+      issue tracking, version control and an extensive testing suite
+    \item Central package used as a data management pipeline by other packages simulating and
+      acquiring multidimensional spectra
+  \end{rSubsection}
+  \begin{rSubsection}{Creator: \href{https://github.com/wright-group/PyCMDS}{PyCMDS}}
+    {2015 - Present}
+    {Unified software for controlling hardware and collecting data in the Wright group.}{}
+    \item Supplies modular hardware control, calibration, and orchestration during complex,
+      long-lasting CMDS experiments.
+    \item Provides interface to optomechanical hardware from a variety of manufacturers, including
+      National Instruments, Thorlabs, Horiba, Newport, and Aerotech. Also controls hardware built
+      and customized in-house.
+    \item Delights users with advanced features such as automatic data backup and notification via
+      Slack.
+    \item In conjunction with contemporaneous hardware improvements, algorithmic improvements in
+      acquisition strategy \textbf{increased scan rate by up to two orders of magnitude} over
+      previous software.
+  \end{rSubsection}
+  \begin{rSubsection}{Creator: \href{https://github.com/wright-group/FilterWheels}{automated filter
+        wheel assembly}}{2017}{Custom filter wheel hardware, electronics and firmware.}{}
+    \item Allows for new experimental degrees of freedom within the Wright group.
+    \item Designed and constructed custom chases in collaboration with the department machine shop.
+    \item Designed custom circuit board using KiCad, ordered supplies from appropriate online
+      retailers
+    \item Designed and implemented serial interface and Arduino firmware, including semi-syncronus
+      motion, low-level C++ string processing, and microstepping control for enhanced acquisition
+      time efficiency
+  \end{rSubsection}
+  \begin{rSubsection}{Creator: \href{https://github.com/untzag/tidy_headers}{tidy\_headers}}{2017}
+    {Rapidly write data from python to plain text, and back again.}{}
+    \item Dependency of larger projects like WrightTools, and used directly for custom
+      applications.
+  \end{rSubsection}
+  \begin{rSubsection}{Founder: \href{https://github.com/wright-group/WrightSim}{WrightSim}}{2017 -
+      Present}
+    {Efficient, flexable simulation package for multidimensional spectroscopy.}{}
+    \item Uses Liouville's theorem to numerically simulate nonlinear spectroscopy.
+    \item I was also a principle contributor to the predecessor of WrightSim,
+      \href{https://github.com/wright-group/NISE}{NISE}.
+  \end{rSubsection}
+  \begin{rSubsection}{Contributor: InGaAs array}{2015 - 2016}
+    {Quickly and cheaply acquire near-infrared pulse spectra.}{}
+    \item Purchased bare array and specialty ADC chip from Hamamatsu, without purchasing expensive
+      control and timing box. Designed and produced custom circuit board and enclosure for device.
+    \item Wrote firmware to handle serial communication between ADC, acquisition software.
+    \item Used advanced features such as watchdog timers to handle unexpected timing and
+      communication problems.
+  \end{rSubsection}
+  \begin{rSubsection}{Contributor: \href{https://github.com/dib-lab/osf-cli}{osfclient}}{2017}
+    {A python library and command-line client for file storage on OSF}{}
+    \item Added Windows functionality, assisted in various debugging efforts in early version of
+      osfcli
+  \end{rSubsection}
+\end{rSection}
+
+\clearpage
+
 \begin{rSection}{Publications}
-  \begin{enumerate}[leftmargin = 0 pt]
+  \begin{etaremune}[leftmargin = 1.75em]
+    \item Horak, Erik H., Rea, Morgan T. Heylman, Kevin D. Gelbwaser-Klimovsky, David, Saikin,
+      Semion K., \textbf{Thompson, Blaise J.}, Kohler, Daniel D., Knapper, Kassandra A., Wei, Wei;
+      Pan, Feng; Gopalan, Padama; Wright, John C.; Aspuru-Guzik, Alan; \& Goldsmith, Randall H.
+      (2018).
+      Exploring Electronic Structure and Order i Polymers via Single-Particle Microresonator
+      Spectroscopy.
+      \textit{Nano Letters}, in press
     \item Kohler, D. D., \textbf{Thompson, B. J.}, \& Wright, J. C. (2017). Frequency-domain
       coherent multidimensional spectroscopy when dephasing rivals pulsewidth:
       Disentangling material and instrument response.
@@ -97,93 +150,34 @@
       Photovoltage of Iron Pyrite Single Crystals.
       \textit{Journal of the American Chemical Society}, 136(49), 17163–17179.
       \href{https://doi.org/10.1021/ja509142w}{10.1021/ja509142w}
-  \end{enumerate}
+  \end{etaremune}
 \end{rSection}
 
 \begin{rSection}{Presentations}
-  \begin{enumerate}[leftmargin = 0 pt]
+  \begin{etaremune}[leftmargin = 1.75 em]
     \item Presentation, Chaos and Complexity Seminar:
-      `Nonlinear Multidimensional Spectroscopy'
+      ``Nonlinear Multidimensional Spectroscopy''
       2017. Madison, WI USA
       \href{https://github.com/untzag/CV/raw/master/supplementary/2017-11-07\%20chaos.pdf}{PDF}
-    \item Poster, Coherent Multidimensional Spectroscopy:
-      `A Robust, Fully Automated Algorithm to Collect High Quality OPA Tuning Curves'
+    \item Poster, Coherent Multidimensional Spectroscopy'':
+      ``A Robust, Fully Automated Algorithm to Collect High Quality OPA Tuning Curves''
       2016. Groningen, the Netherlands
       \href{https://github.com/untzag/CV/raw/master/supplementary/2016-06-01\%20CMDS.pdf}{PDF}
-    \item Poster, Midwest Universities Analytical Chemistry Conference:
-      `Utilizing Coherent Multidimensional Spectroscopy to Investigate Nanomaterials for Solar Energy
-      Generation.'
+    \item Poster, Midwest Universities Analytical Chemistry Conference'':
+      ``Utilizing Coherent Multidimensional Spectroscopy to Investigate Nanomaterials for Solar Energy
+      Generation.''
       2012. Madison, WI USA
-    \item Poster, Mount David Summit:
-      `Spectroscopic Investigation of Plasmonic Nanoparticles.'
+    \item Poster, Mount David Summit'':
+      ``Spectroscopic Investigation of Plasmonic Nanoparticles.''
       2011. Bates College; Lewiston, ME USA
-  \end{enumerate}
-\end{rSection}
-
-\begin{rSection}{Software}
-  \begin{rSubsection}{Founder: \href{http://wright.tools}{WrightTools}}{}{}{}
-    \item hello world
-  \end{rSubsection}
-  \begin{rSubsection}{Founder: yaq}{}{}{}
-    \item hello world
-  \end{rSubsection}
-  \begin{rSubsection}{Founder: WrightSim}{}{}{}
-    \item hello world
-  \end{rSubsection}
-  \begin{rSubsection}{Contributor: \href{https://github.com/dib-lab/osf-cli}{osfclient}}{}{}{}
-    \item hello world
-  \end{rSubsection}
-\end{rSection}
-
-\begin{rSection}{Teaching Experience}
-  \begin{rSubsection}{Chemical Instrumentation: Design \& Control (Electronics)}{2017}
-    {Teaching Assistant}{}
-    \item Led laboratory section of course.
-    \item Assisted students during extended independent instrument design and construction.
-  \end{rSubsection}
-  \begin{rSubsection}{Instrumental Analysis}{2012, 2015}{Teaching Assistant, 2 semesters}{}
-    \item Led laboratory section of course.
-    \item Prepared homeworks and led homework review sessions.
-    \item Lectured in professors absence.
-    \item Received competitive departmental Teaching Assistant award.
-  \end{rSubsection}
-  \begin{rSubsection}{Undergraduate Mentorship}{2012 - 2013}{}{}
-    \item Designed appropriate experiments that were complementary to my own research.
-  \end{rSubsection}
-  \begin{rSubsection}{General Chemistry II}{2011, 2012}{Teaching Assistant, 2 semesters}{}
-    \item Coordinated two sections---total of $\approx50$ students in each semester.
-    \item Led labs.
-    \item Designed and led discussion sections.
-  \end{rSubsection}
-  \begin{rSubsection}{General Chemistry}{2010, 2011}{Peer Science Leader, 2 semesters}
-    {Bates College}
-    \item Designed and led class-wide review sessions for General Chemistry.
-    \item Assisted in first trials of new peer leadership program at Bates College.
-    \item Attended regular meetings to share teaching strategies with other peer leaders.
-  \end{rSubsection}
-\end{rSection}
-
-\begin{rSection}{Skills \& Specialties - Instrumentation and Spectroscopy}
-  \begin{rSubsection}{Analytical Techniques}{}{}{}
-    \item Spectroscopy: Raman / IR / UV-VIS / NMR
-    \item Ultrafast Spectroscopy: Pump Probe / CMDS 
-  \end{rSubsection}
-\end{rSection}
-
-\begin{rSection}{Skills \& Specialties - Scientific Software Development} 
-  \begin{rSubsection}{Computer Programs \& Programming Languages}{}{}{}
-    \item Python (SciPy, PyQT4)
-    \item LabView
-    \item See my work on GitHub: \href{https://github.com/untzag}{github.com/untzag}
-    \item PyPI, conda-forge
-  \end{rSubsection}
+  \end{etaremune}
 \end{rSection}
 
 \begin{rSection}{Awards \& Honors}
   \begin{rSubsection}{Roger Carlson Award}{2017}{}{}
 	  \item Awarded by the University of Wisconsin Chemistry department for excellence in research.
   \end{rSubsection}
-  \begin{rSubsection}{Taylor Teaching Award}{2015}{}{}
+  \begin{rSubsection}{Taylor Teaching Award}{2016}{}{}
     \item  Selected by University of Wisconsin Chemistry students and Faculty as one of the most
       outstanding Teaching Assistants of the 2015-2016 School Year.
   \end{rSubsection}
@@ -197,23 +191,83 @@
   \end{rSubsection}
 \end{rSection}
 
+\clearpage
+
+\begin{rSection}{Teaching Experience}
+  \begin{rSubsection}{Fundamentals of Analytical Science}{2018}{Teaching Assistant, 1 semester}
+    {UW-Madison}
+    \item Led laboratory and discussion sections.
+  \end{rSubsection}
+  \begin{rSubsection}{Graduate Chemical Instrumentation: Design \& Control (Electronics)}{2017}
+    {Teaching Assistant, 1 semester}{UW-Madison}
+    \item Led laboratory section of course.
+    \item Assisted students during extended independent instrument design and construction.
+  \end{rSubsection}
+  \begin{rSubsection}{Graduate Instrumental Analysis}{2012, 2015}{Teaching Assistant, 2
+      semesters}{UW-Madison}
+    \item Led laboratory section of course.
+    \item Prepared homeworks (using Jupyter notebooks for the first time) and led homework review
+      sessions.
+    \item Lectured in professor's absence.
+    \item Received competitive departmental Teaching Assistant award.
+  \end{rSubsection}
+  \begin{rSubsection}{Undergraduate mentor}{2012 - 2013, 2015 - 2017}{6 semesters}{UW-Madison}
+    \item Designed appropriate experiments that were complementary to my own research.
+    \item Introduced undergraduates to spectroscopy, programming, and instrument design
+  \end{rSubsection}
+  \begin{rSubsection}{General Chemistry II}{2011, 2012}{Teaching Assistant, 2
+      semesters}{UW-Madison}
+    \item Coordinated two sections---total of $\approx50$ students in each semester.
+    \item Led labs.
+    \item Designed and led discussion sections.
+  \end{rSubsection}
+  \begin{rSubsection}{General Chemistry}{2010, 2011}{Peer Science Leader, 2 semesters}
+    {Bates College}
+    \item Designed and led class-wide review sessions for General Chemistry.
+    \item Assisted in first trials of new peer leadership program at Bates College.
+    \item Attended regular meetings to share teaching strategies with other peer leaders.
+  \end{rSubsection}
+\end{rSection}
+
+\begin{rSection}{Skills \& Specialties}
+  \begin{rSubsection}{Analytical Techniques}{}{}{}
+    \item Spectroscopy: Raman / IR / UV-VIS / NMR
+    \item Ultrafast Spectroscopy: Pump Probe / CMDS
+    \item Optomechanical design and construction
+  \end{rSubsection}
+  \begin{rSubsection}{Computer Programs \& Programming Languages}{}{}{}
+    \item Python (SciPy, PyQT4, PyPI, micropython)
+    \item git
+    \item Anaconda, conda-forge
+    \item Arduino (Extended C++)
+    \item LaTeX
+    \item LabView
+  \end{rSubsection}
+\end{rSection}
+
+\pagebreak
+
 \begin{rSection}{Service Activites \& Community Involvement}
-  \begin{rSubsection}{Volunteer---PEOPLE}{2017}{}{}
-	  \item PEOPLE: Pre-college Enrichment Opportunity Program for Learning Excellence
+  \begin{rSubsection}{Pre-college Enrichment Opportunity Program for Learning Excellence (PEOPLE)}
+    {2017}{Volunteer}{Madison WI}
 	  \item Taught disadvantaged high school students about electronics, science and what it is like
       to be an analytical chemist
   \end{rSubsection}
-  \begin{rSubsection}{Scientific Judge---Wisconsin Middle School Science Bowl}{2017}{}{}
+  \begin{rSubsection}{Wisconsin Middle School Science Bowl}{2017}{Scientific Judge}{Madison WI}
     \item Judged middle school students in statewide science-knowledge competition.
     \item Winning team proceeded to national competition.
   \end{rSubsection}
-  \begin{rSubsection}{McElvain Committee Member}{2013 - 2014}{}{}
+  \begin{rSubsection}{McElvain Committee}{2013 - 2014}{Committee Member}{UW-Madison}
     \item Graduate student committee to choose seminar speakers.
   \end{rSubsection}
-  \begin{rSubsection}{Freewill Folk Society}{2008 - 2011}{Bates College}{Lewiston ME}
-    \item President of student club.
+  \begin{rSubsection}{Freewill Folk Society}{2008 - 2011}{President}{Bates College}
     \item Reorganized club structure, recruited other students to new club positions.
     \item Organized monthly folk dances, bringing in bands and callers.
+  \end{rSubsection}
+  \begin{rSubsection}{OutFront}{2009 - 2010}{President}{Bates College}
+    \item Held weekly meetings, organized social and political events.
+    \item For the first time, organized and executed collaborative events with other local LGBTQ
+      groups in Lewiston ME.
   \end{rSubsection}
 \end{rSection}
 

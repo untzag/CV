@@ -14,7 +14,7 @@
 % notice and this notice are preserved. This file is offered as-is,
 % without any warranty.
 %
-% Created by Trey Hunner and modified by www.LaTeXTemplates.com
+% Created by Trey Hunner and modified by www.LaTeXTemplates.com, Blaise Thompson
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -22,11 +22,28 @@
 
 \LoadClass[11pt,letterpaper]{article} % Font size and paper type
 
+
+\usepackage[left=0.5in, top=0.5in, right=0.5in, bottom=0.5in]{geometry}  % Document margins
+
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
 
 \pagestyle{empty} % Suppress page numbers
+
+% text
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}   % ensure cm-super package is installed. If not, fonts will be rastered
+\renewcommand{\familydefault}{\sfdefault} % switch default to sans-serif
+
+% lists
+\usepackage{enumitem}
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black, anchorcolor=black]
+{hyperref}
+\renewcommand\labelitemi{$\rightarrow$}
+\setlist{nosep} 
+ % reverse numbering package (requires two renders to work)
+\usepackage[leftmargin = 1.75em]{etaremune}
 
 %----------------------------------------------------------------------------------------
 %	HEADINGS COMMANDS: Commands for printing name and address
@@ -99,7 +116,7 @@
   \sectionlineskip
   \hrule % Horizontal line
   \begin{list}{}{ % List for each individual item in the section
-    \setlength{\leftmargin}{1.5em} % Margin within the section
+    \setlength{\leftmargin}{0em} % Margin within the section
   }
   \item[]
 }{
@@ -110,13 +127,15 @@
 %	WORK EXPERIENCE FORMATTING
 %----------------------------------------------------------------------------------------
 
-\newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
+\newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title
+                                % and location
  {\bf #1} \hfill {#2} % Bold company name and date on the right
- \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+ \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title
+                              % and location line
   \\
   {\em #3} \hfill {#4} % Italic job title and location
   }\smallskip
-  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+  \begin{list}{$\rightarrow$}{\leftmargin=1.75em} % \cdot used for bullets, no indentation
    \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
   }{
   \end{list}
