@@ -53,72 +53,6 @@
 
 \clearpage
 
-\begin{rSection}{Projects (see my \href{https://github.com/untzag}{GitHub})}
-  \begin{rSubsection}{Creator: \href{http://wright.tools}{WrightTools}}{2014 - Present}
-    {Tools for loading, processing, and plotting multidimensional spectroscopy data.}{}
-    \item Single processing toolkit for wide variety of instrumental data, built to be extensible
-      as more data-types become relevant
-    \item Offers specialized interactions, such as transformations, that are particularly suited to
-      multidimensional spectroscopy
-    \item Online documentation through Sphinx and ReadTheDocs
-    \item Project managed with several graduate student and undergraduate contributors, active
-      issue tracking, version control and an extensive testing suite
-    \item Central package used as a data management pipeline by other packages simulating and
-      acquiring multidimensional spectra
-  \end{rSubsection}
-  \begin{rSubsection}{Creator: \href{https://github.com/wright-group/PyCMDS}{PyCMDS}}
-    {2015 - Present}
-    {Unified software for controlling hardware and collecting data in the Wright group.}{}
-    \item Supplies modular hardware control, calibration, and orchestration during complex,
-      long-lasting CMDS experiments.
-    \item Provides interface to optomechanical hardware from a variety of manufacturers, including
-      National Instruments, Thorlabs, Horiba, Newport, and Aerotech. Also controls hardware built
-      and customized in-house.
-    \item Delights users with advanced features such as automatic data backup and notification via
-      Slack.
-    \item In conjunction with contemporaneous hardware improvements, algorithmic improvements in
-      acquisition strategy \textbf{increased scan rate by up to two orders of magnitude} over
-      previous software.
-  \end{rSubsection}
-  \begin{rSubsection}{Creator: \href{https://github.com/wright-group/FilterWheels}{automated filter
-        wheel assembly}}{2017}{Custom filter wheel hardware, electronics and firmware.}{}
-    \item Allows for new experimental degrees of freedom within the Wright group.
-    \item Designed and constructed custom chases in collaboration with the department machine shop.
-    \item Designed custom circuit board using KiCad, ordered supplies from appropriate online
-      retailers
-    \item Designed and implemented serial interface and Arduino firmware, including semi-syncronus
-      motion, low-level C++ string processing, and microstepping control for enhanced acquisition
-      time efficiency
-  \end{rSubsection}
-  \begin{rSubsection}{Creator: \href{https://github.com/untzag/tidy_headers}{tidy\_headers}}{2017}
-    {Rapidly write data from python to plain text, and back again.}{}
-    \item Dependency of larger projects like WrightTools, and used directly for custom
-      applications.
-  \end{rSubsection}
-  \begin{rSubsection}{Founder: \href{https://github.com/wright-group/WrightSim}{WrightSim}}{2017 -
-      Present}
-    {Efficient, flexable simulation package for multidimensional spectroscopy.}{}
-    \item Uses Liouville's theorem to numerically simulate nonlinear spectroscopy.
-    \item I was also a principle contributor to the predecessor of WrightSim,
-      \href{https://github.com/wright-group/NISE}{NISE}.
-  \end{rSubsection}
-  \begin{rSubsection}{Contributor: InGaAs array}{2015 - 2016}
-    {Quickly and cheaply acquire near-infrared pulse spectra.}{}
-    \item Purchased bare array and specialty ADC chip from Hamamatsu, without purchasing expensive
-      control and timing box. Designed and produced custom circuit board and enclosure for device.
-    \item Wrote firmware to handle serial communication between ADC, acquisition software.
-    \item Used advanced features such as watchdog timers to handle unexpected timing and
-      communication problems.
-  \end{rSubsection}
-  \begin{rSubsection}{Contributor: \href{https://github.com/dib-lab/osf-cli}{osfclient}}{2017}
-    {A python library and command-line client for file storage on OSF}{}
-    \item Added Windows functionality, assisted in various debugging efforts in early version of
-      osfcli
-  \end{rSubsection}
-\end{rSection}
-
-\clearpage
-
 \begin{rSection}{Publications}
   \begin{etaremune}[leftmargin = 1.75em]
     \item Horak, Erik H., Rea, Morgan T. Heylman, Kevin D. Gelbwaser-Klimovsky, David, Saikin,
@@ -128,11 +62,13 @@
       Exploring Electronic Structure and Order i Polymers via Single-Particle Microresonator
       Spectroscopy.
       \textit{Nano Letters}, in press
+      \href{https://osf.io/bs8pr/}{osf:bs8pr}
     \item Kohler, D. D., \textbf{Thompson, B. J.}, \& Wright, J. C. (2017). Frequency-domain
       coherent multidimensional spectroscopy when dephasing rivals pulsewidth:
       Disentangling material and instrument response.
       \textit{The Journal of Chemical Physics}, 147(8), 84202.
       \href{https://doi.org/10.1063/1.4986069}{doi:10.1063/1.4986069}
+      \href{https://osf.io/ej2xe/}{osf:ej2xe}
     \item Czech, K. J., \textbf{Thompson, B. J.}, Kain, S., Ding, Q., Shearer, M. J., Hamers,
       R. J., Jin, S., \& Wright, J. C. (2015). Measurement of Ultrafast Excitonic Dynamics of
       Few-Layer MoS$_2$ Using State-Selective Coherent Multidimensional Spectroscopy.
@@ -188,6 +124,70 @@
   \begin{rSubsection}{Bates College Key}{2011}{}{}
     \item Awarded by Bates Faculty and staff to 20 students in each graduating class based on
       academic standing, character, campus and community service, leadership, and future promise.
+  \end{rSubsection}
+\end{rSection}
+
+\clearpage
+
+\begin{rSection}{Projects (see my \href{https://github.com/untzag}{GitHub})}
+  \begin{rSubsection}{Creator: \href{http://wright.tools}{WrightTools}}{2014 - Present}
+    {Tools for loading, processing, and plotting multidimensional spectroscopy data.}{}
+    \item Single processing toolkit for wide variety of instrumental data, built to be extensible
+      as more data-types become relevant
+    \item Offers specialized interactions, such as transformations, that are particularly suited to
+      multidimensional spectroscopy
+    \item Online documentation through Sphinx and ReadTheDocs
+    \item Project managed with several graduate student and undergraduate contributors, active
+      issue tracking, version control and an extensive testing suite
+    \item Central package used as a data management pipeline by other packages simulating and
+      acquiring multidimensional spectra
+  \end{rSubsection}
+  \begin{rSubsection}{Creator: \href{https://github.com/wright-group/PyCMDS}{PyCMDS}}
+    {2015 - Present}
+    {Unified software for controlling hardware and collecting data in the Wright group.}{}
+    \item Supplies modular hardware control, calibration, and orchestration during complex,
+      long-lasting CMDS experiments.
+    \item Provides interface to optomechanical hardware from a variety of manufacturers, including
+      National Instruments, Thorlabs, Horiba, Newport, and Aerotech. Also controls hardware built
+      and customized in-house.
+    \item Delights users with advanced features such as automatic data backup and notification via
+      Slack.
+    \item In conjunction with contemporaneous hardware improvements, algorithmic improvements in
+      acquisition strategy \textbf{increased scan rate by up to two orders of magnitude} over
+      previous software.
+  \end{rSubsection}
+  \begin{rSubsection}{Creator: \href{https://github.com/wright-group/FilterWheels}{automated filter
+        wheel assembly}}{2017}{Custom filter wheel hardware, electronics and firmware.}{}
+    \item Allows for new experimental degrees of freedom within the Wright group.
+    \item Designed and constructed custom chases in collaboration with the department machine shop.
+    \item Designed custom circuit board using KiCad, ordered supplies from appropriate online
+      retailers
+    \item Designed and implemented serial interface and Arduino firmware, including semi-syncronus
+      motion, low-level C++ string processing, and microstepping control for enhanced acquisition
+      time efficiency
+  \end{rSubsection}
+  \begin{rSubsection}{Creator: \href{https://github.com/untzag/tidy_headers}{tidy\_headers}}{2017}
+    {Rapidly write data from python to plain text, and back again.}{}
+    \item Dependency of larger projects like WrightTools, and used directly for custom
+      applications.
+  \end{rSubsection}
+  \begin{rSubsection}{Founder: \href{https://github.com/wright-group/WrightSim}{WrightSim}}{2017 -
+      Present}
+    {Efficient, flexable simulation package for multidimensional spectroscopy.}{}
+    \item Uses Liouville's theorem to numerically simulate nonlinear spectroscopy.
+    \item I was also a principle contributor to the predecessor of WrightSim,
+      \href{https://github.com/wright-group/NISE}{NISE}.
+  \end{rSubsection}
+  \begin{rSubsection}{Contributor: InGaAs array}{2015 - 2016}
+    {Quickly and cheaply acquire near-infrared pulse spectra.}{}
+    \item Wrote firmware to handle serial communication between ADC, acquisition software.
+    \item Used advanced features such as watchdog timers to handle unexpected timing and
+      communication problems.
+  \end{rSubsection}
+  \begin{rSubsection}{Contributor: \href{https://github.com/dib-lab/osf-cli}{osfclient}}{2017}
+    {A python library and command-line client for file storage on OSF}{}
+    \item Added Windows functionality, assisted in various debugging efforts in early version of
+      osfcli
   \end{rSubsection}
 \end{rSection}
 
