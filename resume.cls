@@ -23,7 +23,7 @@
 \LoadClass[11pt,letterpaper]{article} % Font size and paper type
 
 
-\usepackage[left=0.5in, top=0.5in, right=0.5in, bottom=0.5in]{geometry}  % Document margins
+\usepackage[left=0.5in, top=0.5in, right=0.5in, bottom=0.75in]{geometry}  % Document margins
 
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
@@ -35,6 +35,20 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}   % ensure cm-super package is installed. If not, fonts will be rastered
 \renewcommand{\familydefault}{\sfdefault} % switch default to sans-serif
+
+% footer
+%\setlength\headheight{1in}
+%\setlength\headsep{0}
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt} % turn off top header line
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{\AuthorName: \vspace{3cm} \textit{curriculum vitae}}
+\cfoot{\today}
+\rfoot{\thepage}
 
 % lists
 \usepackage{enumitem}
